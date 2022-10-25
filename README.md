@@ -1,6 +1,9 @@
 # Introduction
 Our app will fetch the employee salaries data and display it in JSON format
-Icon
+
+# Logo
+<img src="https://github.com/dhruval-01/IS7024/blob/master/MicrosoftTeams-image.png" width="350" alt="accessibility text">
+
 StoryBoard
 # Requirments
 
