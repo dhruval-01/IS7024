@@ -1,3 +1,5 @@
+<img src="https://github.com/dhruval-01/IS7024/blob/master/logo-no-background.png" width="350" alt="accessibility text">
+
 # Introduction
 Next works here...
 
@@ -10,9 +12,10 @@ Are you job seeker? Do you know which are the most booming jobs in the Cincinnat
 * Job Type (Full Time or Part Time)
 * Helps you find your interest Department
 
-<img src="https://github.com/dhruval-01/IS7024/blob/master/logo-no-background.png" width="350" alt="accessibility text">
+# DataFeeds
 
-StoryBoard
+<a href="https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Employees-w-Salaries/wmj4-ygbf">City of Cincinnati Employees w/ Salaries</a><br/>
+<a href="https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Salary-Schedule/yaws-h72m">City of Cincinnati Salary Schedule</a>
 
 # Requirements
 As a job seeker I wants to know more about the job opportunities in the public domain, I want to check the various roles which are being offered in the city of Cincinnati public domain based on the range of salaries being offered, job type, department and my preferred job location. This will help me decide my career path and also the role which are trending and in demand.
@@ -21,7 +24,7 @@ As a job seeker I wants to know more about the job opportunities in the public d
 
 The city of Cincinnati provides us the dataset which has the details of all the employees, their full names, department, position title, full-time employee status, employee age range, employee race and annual salary rate.
 
-# Examples
+## Examples
 
 # Scrum Roles
 
