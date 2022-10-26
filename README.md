@@ -26,12 +26,12 @@ The city of Cincinnati provides us the dataset which has the details of all the 
 
 ## Examples
 
-1) Given an employee details dataset
-   when I search for "Senior Engineer-EXM"
-   then I should receive atleast one result with these attributes:
-   Department name: "CWW Plant Plan & Spec. Studies"
-   Location : "WAEPLANSTD"	
-   Annual Package : 101,391.231
+1) <strong>Given</strong> an employee details dataset <br>
+   <strong>When</strong> I search for "Senior Engineer-EXM" <br>
+   <strong>Then</strong> I should receive atleast one result with these attributes:<br>
+   Department name: "CWW Plant Plan & Spec. Studies"<br>
+   Location : "WAEPLANSTD"	<br>
+   Annual Package : 101,391.231 <br>
    
 
 # Scrum Roles
