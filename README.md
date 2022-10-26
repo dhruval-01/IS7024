@@ -10,7 +10,7 @@ Are you job seeker? Do you know which are the most booming jobs in the Cincinnat
 * Job Type (Full Time or Part Time)
 * Helps you find your interest Department
 
-<img src="https://github.com/dhruval-01/IS7024/blob/master/MicrosoftTeams-image.png" width="350" alt="accessibility text">
+<img src="https://github.com/dhruval-01/IS7024/blob/master/logo-no-background.png" width="350" alt="accessibility text">
 
 StoryBoard
 
