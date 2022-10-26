@@ -26,6 +26,14 @@ The city of Cincinnati provides us the dataset which has the details of all the 
 
 ## Examples
 
+1) Given an employee details dataset
+   when I search for "Senior Engineer-EXM"
+   then I should receive atleast one result with these attributes:
+   Department name: "CWW Plant Plan & Spec. Studies"
+   Location : "WAEPLANSTD"	
+   Annual Package : 101,391.231
+   
+
 # Scrum Roles
 
 * Scrum Master : Yash Karve
