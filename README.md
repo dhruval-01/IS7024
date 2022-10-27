@@ -3,10 +3,10 @@
 # Introduction
 Next works here...
 
-Are you job seeker? Do you know which are the most booming jobs in the Cincinnati public sector? Do you know what profiles pay the most? Our website will help you clear all you questions and help you get the right job...
+Are you a job seeker? Do you know which are the most booming jobs in the Cincinnati public sector? Do you know what job profiles pay the most? Our website will help you clear all your questions and help you get the right job...
 
-* Displays Job Opportunities available in the city's public sector  
-* Gives an insight on the salaries paid for different job roles
+* Display Job Opportunities available in the city's public sector  
+* Give insights into the salaries paid for different job roles
 * Helps you find a job in your preferred job location 
 * Shows you the recent hiring trends for the role you are seeking
 * Job Type (Full Time or Part Time)
@@ -18,7 +18,7 @@ Are you job seeker? Do you know which are the most booming jobs in the Cincinnat
 <a href="https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Salary-Schedule/yaws-h72m">City of Cincinnati Salary Schedule</a>
 
 # Requirements
-As a job seeker I wants to know more about the job opportunities in the public domain, I want to check the various roles which are being offered in the city of Cincinnati public domain based on the range of salaries being offered, job type, department and my preferred job location. This will help me decide my career path and also the role which are trending and in demand.
+As a job seeker, I want to know more about the job opportunities in the public domain, I want to check the various roles which are being offered in the city of Cincinnati public domain based on the range of salaries being offered, job type, department and my preferred job location. This will help me decide my career path and also the role which are trending and in demand.
 
 ## Dependencies
 
@@ -31,7 +31,7 @@ Assuming that an individual is eligible to take up a job role of a <strong>Polic
 1.1
 <strong>Given</strong> a feed of employee salary data and salary schedule is available <br>
    <strong>When</strong> I search for "Senior Engineer-EXM" <br>
-   <strong>Then</strong> I should receive atleast one result with these attributes:<br>
+   <strong>Then</strong> I should receive at least one result with these attributes:<br>
    Department name: "CWW Plant Plan & Spec. Studies"<br>
    Location : "WAEPLANSTD"	<br>
    Annual Package : 101,391.231 <br>
