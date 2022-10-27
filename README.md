@@ -28,12 +28,25 @@ The city of Cincinnati provides us the dataset which has the details of all the 
 
 Assuming that an individual is eligible to take up a job role of a <strong>Police Sergeant.</strong> He/she can then go on our website and get insights on the statistics that will help the user better plan his/her career as a Police Sergeant. The user can then filter out precincts depending on his/her preferences and role availability,<strong> thus saving him/her some precious time.</strong> Additionally, the user can only apply to the precinct that provides minimum expected salaries, has a desirable number of hours shift, and is in a preferred location, <strong>thus increasing his/her chances of placement</strong>
 
-* <strong>Given</strong> an employee details dataset <br>
+1.1
+<strong>Given</strong> a feed of employee salary data and salary schedule is available <br>
    <strong>When</strong> I search for "Senior Engineer-EXM" <br>
    <strong>Then</strong> I should receive atleast one result with these attributes:<br>
    Department name: "CWW Plant Plan & Spec. Studies"<br>
    Location : "WAEPLANSTD"	<br>
    Annual Package : 101,391.231 <br>
+ 
+1.2
+<strong>Given</strong> a feed of employee salary data and salary schedule is available<br/>
+<strong>When</strong> : 
+		Select the JobTitle "Senior Admin Spec-EXM" <br/>
+		<strong>Then:</strong>
+		Should receive the salary Plan Desc, Annual Salary Rate, Job Family 
+ 
+ 1.3
+<strong>Given</strong> a feed of employee salary data and salary schedule is available <br/>
+<strong>When</strong> I search for “dbshdghsdu” <br/>
+<strong>Then:</strong> I should receive no results (an empty list)
    
    
 
