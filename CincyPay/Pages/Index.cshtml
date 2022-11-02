@@ -3,8 +3,69 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<style>
+    button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+}
+</style>
+<div class="container" style="position:relative">
+    <img src="/Images/landing-bg.jpg" width="100%" />
+    <a asp-page="/SearchPage">
+    <button style="color: white;
+    background: #0074D9;
+    height: 32px;
+    left: 50%;
+    top: 36%;
+    position: absolute;
+    font-weight: bolder;
+    width: 315px;
+    border-radius: 20px;">
+        Search for Jobs!
+        </button>
+    </a>
 </div>
+<hr />
+<div class="container">
+    <h2 style="margin-left:40%;color: #0074D9">What Do We Do ?</h2>
+    <div class="row">
+        <div class="col">
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
+
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+            The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content
+        </div>
+        <div class="col">
+            <img src="/Images/about-us.jpg" width="550px" />
+        </div>
+    </div>
+    <hr />
+    <h2 style="margin-left:40%; color: #0074D9;">Data Provided</h2>
+    <div style="margin-top:40px; margin-left:100px" class="row">
+        <div class="col">
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="/Images/domains.png" width="250px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="/Images/salary.png" width="250px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="/Images/demand.png" width="250px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
