@@ -1,7 +1,9 @@
 ﻿@page
+@using EmpSalaryData;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    List<EmpSalary> salaryData = (List<EmpSalary>)ViewData["EmpSalary"];
 }
 <style>
     button:hover {
@@ -27,6 +29,49 @@
 </div>
 <hr />
 <div class="container">
+
+    <table>
+        <tr>
+            <th>AgeRange</th>
+            <th>Name</th>
+            <th>Sex</th>
+            <th>Race</th>
+            <th>BusinessTitle</th>
+            <th>Jobcode</th>
+            <th>Location</th>
+            <th>Paygroup</th>
+            <th>StdHours</th>
+            <th>SalAdminPlan</th>
+            <th>Jobtitle</th>
+            <th>Deptname</th>
+            <th>HireDate</th>
+        </tr>
+        @{
+            foreach (EmpSalary empSalary in salaryData)
+            {
+                <tr>
+                    <td>@empSalary.AgeRange</td>
+                    <td>@empSalary.Name</td>
+                    <td>@empSalary.Sex</td>
+                    <td>@empSalary.Race</td>
+                    <td>@empSalary.BusinessTitle</td>
+                    <td>@empSalary.Deptid</td>
+                    <td>@empSalary.Jobcode</td>
+                    <td>@empSalary.Location</td>
+                    <td>@empSalary.Paygroup</td>
+                    <td>@empSalary.StdHours</td>
+                    <td>@empSalary.SalAdminPlan</td>
+                    <td>@empSalary.Jobtitle</td>
+                    <td>@empSalary.Deptname</td>
+                    <td>@empSalary.HireDate</td>
+                </tr>
+            }
+
+        }
+
+
+    </table>
+
     <h2 style="margin-left:40%;color: #0074D9">What Do We Do ?</h2>
     <div class="row">
         <div class="col">
