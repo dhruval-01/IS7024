@@ -1,5 +1,4 @@
 ﻿using EmpSalaryData;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CincyPay.Pages
