@@ -1,0 +1,202 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/EmpSalaryElement"
+  },
+  "definitions": {
+    "EmpSalaryElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "age_range": {
+          "$ref": "#/definitions/AgeRange"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 65
+        },
+        "sex": {
+          "$ref": "#/definitions/Sex"
+        },
+        "race": {
+          "$ref": "#/definitions/Race"
+        },
+        "business_title": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 65
+        },
+        "deptid": {
+          "type": "string",
+          "minimum": 0
+        },
+        "jobcode": {
+          "type": "string"
+        },
+        "position_nbr": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "job_entry_dt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "paygroup": {
+          "$ref": "#/definitions/Paygroup"
+        },
+        "std_hours": {
+          "type": "string",
+          "format": "integer"
+        },
+        "fte": {
+          "type": "string"
+        },
+        "sal_admin_plan": {
+          "$ref": "#/definitions/SalAdminPlan"
+        },
+        "grade": {
+          "type": "string"
+        },
+        "step": {
+          "type": "string",
+          "format": "integer"
+        },
+        "annual_rt": {
+          "type": "string"
+        },
+        "eeo_job_group": {
+          "type": "string",
+          "format": "integer"
+        },
+        "job_family": {
+          "$ref": "#/definitions/JobFamily"
+        },
+        "jobtitle": {
+          "type": "string"
+        },
+        "jobtitle_abbrv": {
+          "type": "string"
+        },
+        "deptname": {
+          "type": "string"
+        },
+        "deptname_abbrv": {
+          "type": "string"
+        },
+        "hire_date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "age_range",
+        "annual_rt",
+        "business_title",
+        "deptid",
+        "deptname",
+        "deptname_abbrv",
+        "fte",
+        "grade",
+        "hire_date",
+        "job_entry_dt",
+        "jobcode",
+        "jobtitle",
+        "jobtitle_abbrv",
+        "location",
+        "name",
+        "paygroup",
+        "position_nbr",
+        "race",
+        "sal_admin_plan",
+        "sex",
+        "std_hours",
+        "step"
+      ],
+      "title": "EmpSalaryElement"
+    },
+    "AgeRange": {
+      "type": "string",
+      "enum": [
+        "41-50",
+        "61-70",
+        "OVER 70",
+        "31-40",
+        "18-25",
+        "26-30",
+        "51-60",
+        "UNDER 18"
+      ],
+      "title": "AgeRange"
+    },
+    "JobFamily": {
+      "type": "string",
+      "enum": [
+        "D1AFS",
+        "D4PT",
+        "D0MGM",
+        "D2POL",
+        "D2FIR",
+        "D8SMG",
+        "D7LAW",
+        "D5ADM",
+        "D9LEG",
+        "D3TRD"
+      ],
+      "title": "JobFamily"
+    },
+    "Paygroup": {
+      "type": "string",
+      "enum": [
+        "GEN",
+        "MGM",
+        "POL",
+        "FIR"
+      ],
+      "title": "Paygroup"
+    },
+    "Race": {
+      "type": "string",
+      "enum": [
+        "BLACK",
+        "WHITE",
+        "UNKNOWN",
+        "ASIAN/PACIFIC ISLANDER",
+        "AMERICAN INDIAN/ALASKAN NATIVE",
+        "HISPANIC",
+        "CHINESE"
+      ],
+      "title": "Race"
+    },
+    "SalAdminPlan": {
+      "type": "string",
+      "enum": [
+        "D1",
+        "D4",
+        "D0C",
+        "POL",
+        "D0",
+        "F40",
+        "D8",
+        "D4M",
+        "LAW",
+        "D5",
+        "F48",
+        "D9",
+        "D3"
+      ],
+      "title": "SalAdminPlan"
+    },
+    "Sex": {
+      "type": "string",
+      "enum": [
+        "F",
+        "M"
+      ],
+      "title": "Sex"
+    }
+  }
+}

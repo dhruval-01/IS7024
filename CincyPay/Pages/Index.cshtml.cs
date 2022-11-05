@@ -1,5 +1,7 @@
 ﻿using EmpSalaryData;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 
 namespace CincyPay.Pages
 {
@@ -23,7 +25,19 @@ namespace CincyPay.Pages
             { 
                 Task<string> readString = result.Content.ReadAsStringAsync();
                 string jsonString = readString.Result;
-                salaryData = EmpSalary.FromJson(jsonString);
+                JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("empsalary.json"));
+                JArray jsonArray = JArray.Parse(jsonString);
+                IList<string> validationEvents = new List<string>();
+                if(jsonArray.IsValid(schema, out validationEvents))
+                {
+                    salaryData = EmpSalary.FromJson(jsonString);
+                } else {
+                    foreach(string evt in validationEvents) {
+                        Console.WriteLine(evt);
+                    }
+                       
+                }
+                
             }
 
             ViewData["EmpSalary"] = salaryData;
