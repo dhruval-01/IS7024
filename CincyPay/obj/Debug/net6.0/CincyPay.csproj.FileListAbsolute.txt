@@ -24,3 +24,7 @@ C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\obj\Debug\net6.0\refin
 C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\obj\Debug\net6.0\CincyPay.pdb
 C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\obj\Debug\net6.0\CincyPay.genruntimeconfig.cache
 C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\obj\Debug\net6.0\ref\CincyPay.dll
+C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\bin\Debug\net6.0\empsalary.json
+C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\bin\Debug\net6.0\Newtonsoft.Json.Schema.dll
+C:\Users\rudravlh\source\repos\dhruval-01\IS7024\CincyPay\obj\Debug\net6.0\CincyPay.csproj.CopyComplete
