@@ -1,3 +1,4 @@
+using DepartmentData;
 using EmpSalaryData;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,6 +18,13 @@ namespace CincyPay.Pages
             _logger = logger;
         }
         public void OnGet()
+        {
+            List<EmpSalary> salaryData = GetEmpData();
+
+            ViewData["EmpSalary"] = salaryData;
+        }
+
+        private static List<EmpSalary> GetEmpData()
         {
             var task = client.GetAsync("https://data.cincinnati-oh.gov/resource/wmj4-ygbf.json");
             HttpResponseMessage result = task.Result;
@@ -43,7 +51,7 @@ namespace CincyPay.Pages
 
             }
 
-            ViewData["EmpSalary"] = salaryData;
+            return salaryData;
         }
     }
 }
