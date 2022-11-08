@@ -17,7 +17,6 @@ namespace CincyPay.Pages
 
             ViewData["EmpSalary"] = FinalFilteredList;
         }
-
         private static List<EmpSalary> GetFilteredDeptData()
         {
             var task = client.GetAsync("https://data.cincinnati-oh.gov/resource/wmj4-ygbf.json");
@@ -44,7 +43,6 @@ namespace CincyPay.Pages
                 }
 
             }
-
             Task<HttpResponseMessage> deptTask = client.GetAsync("https://data.cincinnati-oh.gov/resource/txnn-6e6x.json");
             HttpResponseMessage deptResult = deptTask.Result;
             Task<string> deptTaskString = deptResult.Content.ReadAsStringAsync();
@@ -67,7 +65,6 @@ namespace CincyPay.Pages
             {
 
             }
-
             return FinalFilteredList;
         }
     }
