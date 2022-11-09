@@ -92,19 +92,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adars\\.nuget\\packages\\": {}
+    "C:\\Users\\yashk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adars\\OneDrive\\Desktop\\XmlProj\\CincyPay\\CincyPay.csproj",
+      "projectUniqueName": "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\CincyPay.csproj",
       "projectName": "CincyPay",
-      "projectPath": "C:\\Users\\adars\\OneDrive\\Desktop\\XmlProj\\CincyPay\\CincyPay.csproj",
-      "packagesPath": "C:\\Users\\adars\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adars\\OneDrive\\Desktop\\XmlProj\\CincyPay\\obj\\",
+      "projectPath": "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\CincyPay.csproj",
+      "packagesPath": "C:\\Users\\yashk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adars\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yashk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

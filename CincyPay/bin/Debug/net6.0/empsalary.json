@@ -2,10 +2,10 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
   "items": {
-    "$ref": "#/definitions/EmpSalaryElement"
+    "$ref": "#/definitions/EmpSalaryElementElement"
   },
   "definitions": {
-    "EmpSalaryElement": {
+    "EmpSalaryElementElement": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -13,9 +13,7 @@
           "$ref": "#/definitions/AgeRange"
         },
         "name": {
-          "type": "string",
-          "minLength": 2,
-          "maxLength": 65
+          "type": "string"
         },
         "sex": {
           "$ref": "#/definitions/Sex"
@@ -24,13 +22,10 @@
           "$ref": "#/definitions/Race"
         },
         "business_title": {
-          "type": "string",
-          "minLength": 2,
-          "maxLength": 65
+          "type": "string"
         },
         "deptid": {
-          "type": "string",
-          "minimum": 0
+          "type": "string"
         },
         "jobcode": {
           "type": "string"
@@ -100,7 +95,6 @@
         "deptname",
         "deptname_abbrv",
         "fte",
-        "grade",
         "hire_date",
         "job_entry_dt",
         "jobcode",
@@ -116,18 +110,18 @@
         "std_hours",
         "step"
       ],
-      "title": "EmpSalaryElement"
+      "title": "EmpSalaryElementElement"
     },
     "AgeRange": {
       "type": "string",
       "enum": [
-        "41-50",
-        "61-70",
-        "OVER 70",
         "31-40",
         "18-25",
-        "26-30",
+        "41-50",
         "51-60",
+        "26-30",
+        "61-70",
+        "OVER 70",
         "UNDER 18"
       ],
       "title": "AgeRange"
@@ -135,38 +129,38 @@
     "JobFamily": {
       "type": "string",
       "enum": [
-        "D1AFS",
-        "D4PT",
         "D0MGM",
-        "D2POL",
-        "D2FIR",
+        "D4PT",
+        "D1AFS",
         "D8SMG",
-        "D7LAW",
         "D5ADM",
-        "D9LEG",
-        "D3TRD"
+        "D2FIR",
+        "D7LAW",
+        "D2POL",
+        "D3TRD",
+        "D9LEG"
       ],
       "title": "JobFamily"
     },
     "Paygroup": {
       "type": "string",
       "enum": [
-        "GEN",
         "MGM",
-        "POL",
-        "FIR"
+        "GEN",
+        "FIR",
+        "POL"
       ],
       "title": "Paygroup"
     },
     "Race": {
       "type": "string",
       "enum": [
-        "BLACK",
         "WHITE",
-        "UNKNOWN",
+        "BLACK",
         "ASIAN/PACIFIC ISLANDER",
-        "AMERICAN INDIAN/ALASKAN NATIVE",
         "HISPANIC",
+        "UNKNOWN",
+        "AMERICAN INDIAN/ALASKAN NATIVE",
         "CHINESE"
       ],
       "title": "Race"
@@ -174,27 +168,27 @@
     "SalAdminPlan": {
       "type": "string",
       "enum": [
-        "D1",
-        "D4",
         "D0C",
-        "POL",
         "D0",
-        "F40",
+        "D4",
+        "D1",
         "D8",
-        "D4M",
-        "LAW",
         "D5",
         "F48",
-        "D9",
-        "D3"
+        "F40",
+        "LAW",
+        "D4M",
+        "POL",
+        "D3",
+        "D9"
       ],
       "title": "SalAdminPlan"
     },
     "Sex": {
       "type": "string",
       "enum": [
-        "F",
-        "M"
+        "M",
+        "F"
       ],
       "title": "Sex"
     }
