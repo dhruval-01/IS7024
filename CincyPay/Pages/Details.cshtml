@@ -1,10 +1,13 @@
 ﻿@page
 @using EmpSalaryData;
+@using DepartmentData;
 @using System.Collections.Generic;
 @model CincyPay.Pages.DetailsModel
 @{
     List<EmpSalary> FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
+    List<Department> DepartmentList = (List<Department>)ViewData["depList"];
     Dictionary<String, int> d = new Dictionary<string, int>();
+    
 }
 <table>
     <tr>
@@ -13,18 +16,23 @@
         
     </tr>
     @{
-        foreach (EmpSalary empSalary in FinalFilteredList)
+        foreach (Department empSalary in DepartmentList)
         {
-            if(d.ContainsKey(empSalary.Deptname)){
-                
+            if(d.ContainsKey(empSalary.DepartmentDepartment)){
+
             }
             else{
+                
+
                 <tr>
                     <td>
-                        @empSalary.Deptname
+                       
+                            <a href="/JobDetails">@empSalary.DepartmentDepartment</a>
+                      
+                        
                     </td>
                 </tr>
-                d.Add(empSalary.Deptname,1);
+                d.Add(empSalary.DepartmentDepartment,1);
             }
             
             
