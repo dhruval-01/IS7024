@@ -2,39 +2,35 @@
 @using EmpSalaryData;
 @using System.Collections.Generic;
 @model CincyPay.Pages.DetailsModel
-
 @{
-
     List<EmpSalary> FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
     Dictionary<String, int> d = new Dictionary<string, int>();
 }
 <table>
     <tr>
+       
+        <th>Department Name</th>
         
-        <th>Deptname</th>
-
     </tr>
-    
     @{
         foreach (EmpSalary empSalary in FinalFilteredList)
         {
             if(d.ContainsKey(empSalary.Deptname)){
-
+                
             }
             else{
-                        <tr>
-
-                            <td>
-                                @empSalary.Deptname
-                            </td>
-
-                        </tr>
-
-                        d.Add(empSalary.Deptname,1);
-                    }
+                <tr>
+                    <td>
+                        @empSalary.Deptname
+                    </td>
+                </tr>
+                d.Add(empSalary.Deptname,1);
+            }
             
-           
+            
         }
 
     }
+
+
 </table>
