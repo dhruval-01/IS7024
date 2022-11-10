@@ -7,38 +7,99 @@
     List<EmpSalary> FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
     List<Department> DepartmentList = (List<Department>)ViewData["depList"];
     Dictionary<String, int> d = new Dictionary<string, int>();
-    
+
 }
-<table>
-    <tr>
-       
-        <th>Department Name</th>
-        
-    </tr>
-    @{
-        foreach (Department empSalary in DepartmentList)
-        {
-            if(d.ContainsKey(empSalary.DepartmentDepartment)){
-
-            }
-            else{
-                
-
-                <tr>
-                    <td>
-                       
-                            <a href="/JobDetails">@empSalary.DepartmentDepartment</a>
-                      
-                        
-                    </td>
-                </tr>
-                d.Add(empSalary.DepartmentDepartment,1);
-            }
-            
-            
-        }
-
+<style>
+    #GFG {
+        text-decoration: none;
     }
 
+    .left {
+        float: left;
+        width: 50%;
+        overflow-y: scroll;
+        max-height: 575px;
+        border: 4px solid gainsboro;
+        border-radius: 21px;
+        padding: 11px;
+        margin-top: 25px;
+    }
 
-</table>
+    .right {
+        float: right;
+        width: 50%;
+    }
+
+    .top {
+        height: 50%;
+        float: top;
+        margin-left: 45px;
+        margin-top: 20px;
+    }
+
+    .bottom {
+        height: 50%;
+        float: bottom;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 1px grey;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #0074D9;
+        border-radius: 10px;
+    }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: gainsboro;
+        }
+</style>
+<div style="overflow-y:hidden;">
+    <div class="left">
+
+        </tr>
+        @{
+            foreach (Department empSalary in DepartmentList)
+            {
+                if (d.ContainsKey(empSalary.DepartmentDepartment))
+                {
+
+                }
+                else
+                {
+                    <a href="/JobDetails">
+                        <div class="card" style="margin-top:6px">
+                            <div class="card-body">
+                                <span>  @empSalary.DepartmentDepartment</span>
+                            </div>
+                        </div>
+                    </a>
+                    d.Add(empSalary.DepartmentDepartment, 1);
+                }
+
+
+            }
+
+        }
+
+    </div>
+    <div class="right">
+        <div class="top">
+
+            <h1>Job Category!</h1>
+            <h6>Find from the list of categories that suit and you and get to know employees and their job details working in the specific job fields. </h6>
+        </div>
+        <div class="bottom">
+            <img width="100%" src="/Images/departments.jpg" />
+        </div>
+    </div>
+</div>
