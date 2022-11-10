@@ -15,7 +15,7 @@ Are you a job seeker? Do you know which are the most booming jobs in the Cincinn
 # DataFeeds
 
 <a href="https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Employees-w-Salaries/wmj4-ygbf">City of Cincinnati Employees w/ Salaries</a><br/>
-<a href="https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Salary-Schedule/yaws-h72m">City of Cincinnati Salary Schedule</a>
+<a href="https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Department-Information/txnn-6e6x">City of Cincinnati Salary Schedule</a>
 
 # Requirements
 As a job seeker, I want to know more about the job opportunities in the public domain, I want to check the various roles which are being offered in the city of Cincinnati public domain based on the range of salaries being offered, job type, department and my preferred job location. This will help me decide my career path and also the role which are trending and in demand.
