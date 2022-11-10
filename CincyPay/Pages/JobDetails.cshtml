@@ -1,0 +1,41 @@
+﻿@page
+@using EmpSalaryData;
+@model CincyPay.Pages.JobDetailsModel
+@{
+    List<EmpSalary> FinalFilteredList = new List<EmpSalary>();
+    FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
+    String s = Model.inputDepid;
+
+
+
+}
+<table>
+    <tr>
+
+        <th>Job Title</th>
+        <th>Hours per week</th>
+        <th>Salary</th>
+
+    </tr>
+    @{
+        foreach (EmpSalary empSalary in FinalFilteredList)
+        {
+            if (empSalary.Jobcode.Equals(s))
+            {
+                <tr>
+                    <td>empSalary.jobtitle</td>
+                    <td>empSalary.std_hours</td>
+                    <td>empSalary.annual_rt</td>
+                </tr>
+
+            }
+
+
+
+        }
+
+    }
+
+
+</table>
+
