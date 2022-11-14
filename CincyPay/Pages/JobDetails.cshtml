@@ -15,24 +15,28 @@
         <th>Job Title</th>
         <th>Hours per week</th>
         <th>Salary</th>
-
     </tr>
-    @{
+
+    // Added logic to handle if FinalFilteredList is null.  I clicked on Department details and then clicked on Employee Retirement System and got an error because FinalFilteredList was null.  Logic added returns a blank page.
+    // reference: https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/sql/handling-null-values
+
+    @{  if (FinalFilteredList != null)
+        {
         foreach (EmpSalary empSalary in FinalFilteredList)
         {
             if (empSalary.Jobcode.Equals(s))
             {
-                <tr>
-                    <td>empSalary.jobtitle</td>
-                    <td>empSalary.std_hours</td>
-                    <td>empSalary.annual_rt</td>
-                </tr>
+                    <tr>
+                        <td>empSalary.jobtitle</td>
+                        <td>empSalary.std_hours</td>
+                        <td>empSalary.annual_rt</td>
+                        </tr>
 
-            }
+                }
+            }    
 
 
-
-        }
+        } 
 
     }
 
