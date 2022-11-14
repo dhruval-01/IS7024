@@ -17,9 +17,6 @@
         <th>Salary</th>
     </tr>
 
-    // Added logic to handle if FinalFilteredList is null.  I clicked on Department details and then clicked on Employee Retirement System and got an error because FinalFilteredList was null.  Logic added returns a blank page.
-    // reference: https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/sql/handling-null-values
-
     @{  if (FinalFilteredList != null)
         {
         foreach (EmpSalary empSalary in FinalFilteredList)
