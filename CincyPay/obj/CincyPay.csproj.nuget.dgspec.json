@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\CincyPay.csproj": {}
+    "C:\\Users\\parziacl\\Source\\Repos\\IS7024\\CincyPay\\CincyPay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\CincyPay.csproj": {
+    "C:\\Users\\parziacl\\Source\\Repos\\IS7024\\CincyPay\\CincyPay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\CincyPay.csproj",
+        "projectUniqueName": "C:\\Users\\parziacl\\Source\\Repos\\IS7024\\CincyPay\\CincyPay.csproj",
         "projectName": "CincyPay",
-        "projectPath": "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\CincyPay.csproj",
-        "packagesPath": "C:\\Users\\yashk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yashk\\Source\\Repos\\dhruval-01\\IS7024\\CincyPay\\obj\\",
+        "projectPath": "C:\\Users\\parziacl\\Source\\Repos\\IS7024\\CincyPay\\CincyPay.csproj",
+        "packagesPath": "C:\\Users\\parziacl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\parziacl\\Source\\Repos\\IS7024\\CincyPay\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\yashk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\parziacl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
