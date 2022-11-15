@@ -18,20 +18,28 @@
 
     </tr>
     @{
-        foreach (EmpSalary empSalary in FinalFilteredList)
+        if (FinalFilteredList != null)
         {
-            if (empSalary.Jobcode.Equals(s))
+            foreach (EmpSalary empSalary in FinalFilteredList)
             {
-                <tr>
-                    <td>empSalary.jobtitle</td>
-                    <td>empSalary.std_hours</td>
-                    <td>empSalary.annual_rt</td>
-                </tr>
+                if (empSalary.Jobcode.Equals(s))
+                {
+                    <tr>
+                        <td>empSalary.jobtitle</td>
+                        <td>empSalary.std_hours</td>
+                        <td>empSalary.annual_rt</td>
+                    </tr>
 
+                }   
             }
-
-
-
+        }
+        else
+        {
+            <tr>
+                <td>Job Title</td>
+                <td>Hours Per Week</td>
+                <td>Salary</td>
+            </tr>
         }
 
     }

@@ -24,13 +24,13 @@ namespace CincyPay.Pages
             if (result.IsSuccessStatusCode) 
             { 
                 Task<string> readString = result.Content.ReadAsStringAsync();
-                string jsonString = readString.Result;
+                string jobDetails = readString.Result;
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("empsalary.json"));
-                JArray jsonArray = JArray.Parse(jsonString);
+                JArray jsonArray = JArray.Parse(jobDetails);
                 IList<string> validationEvents = new List<string>();
                 if(jsonArray.IsValid(schema, out validationEvents))
                 {
-                    salaryData = EmpSalary.FromJson(jsonString);
+                    salaryData = EmpSalary.FromJson(jobDetails);
                 } else {
                     foreach(string evt in validationEvents) {
                         Console.WriteLine(evt);
