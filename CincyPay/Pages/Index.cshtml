@@ -5,15 +5,20 @@
     ViewData["Title"] = "Home page";
     List<EmpSalary> salaryData = (List<EmpSalary>)ViewData["EmpSalary"];   
 }
+<html>
+    <head>
 <style>
     button:hover {
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
 }
+
 </style>
+</head>
+<body>
 <div class="container" style="position:relative">
-    <img src="/Images/landing-bg.jpg" width="100%" />
-    <a asp-page="/SearchPage">
+    <img src="/Images/landing-bg.jpg" width="100%" alt="IndexPageImg1"/>
+        <a asp-page="/SearchPage"></a>
     <button style="color: white;
     background: #0074D9;
     height: 30px;
@@ -25,7 +30,7 @@
     border-radius: 20px;">
         Search for Jobs!
         </button>
-    </a>
+ 
 </div>
 <hr />
 <div class="container">
@@ -45,15 +50,15 @@
             Helps you find your interest Department
         </div>
         <div class="col">
-            <img src="/Images/about-us.jpg" width="550px" />
+            <img src="/Images/about-us.jpg" width="550" alt="AboutUsPageImg" />
         </div>
     </div>
     <hr />
     <h2 style="margin-left:40%; color: #0074D9;">Explore our key features</h2>
-    <div style="margin-top:40px; margin-left:100px" class="row">
+    <div style="margin-top:40; margin-left:100" class="row">
         <div class="col">
             <div class="card" style="width: 15rem;">
-                <img class="card-img-top" src="/Images/domains.png" width="250px" alt="Card image cap">
+                <img class="card-img-top" src="/Images/domains.png" width="250" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">Improve your job search reach by exploring multiple job profiles in the Cincinnati Public Sector</p>
                 </div>
@@ -61,7 +66,7 @@
         </div>
         <div class="col">
             <div class="card" style="width: 15rem;">
-                <img class="card-img-top" src="/Images/salary.png" width="250px" alt="Card image cap">
+                <img class="card-img-top" src="/Images/salary.png" width="250" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">Compare jobs by pay and find the right fit for you</p>
                 </div>
@@ -69,7 +74,7 @@
         </div>
         <div class="col">
             <div class="card" style="width: 15rem;">
-                <img class="card-img-top" src="/Images/demand.png" width="250px" alt="Card image cap">
+                <img class="card-img-top" src="/Images/demand.png" width="250" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">Get insights on the most booming and high paying jobs in Cincinnati</p>
                 </div>
@@ -77,4 +82,5 @@
         </div>
     </div>
 </div>
-
+</body>
+</html>
