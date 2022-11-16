@@ -7,13 +7,13 @@ namespace CincyPay.Pages
 {
     public class JobDetailsModel : PageModel
     {
-        public String inputDepid { get; set; }
-        public List<EmpSalary> inputJoinList { get; set; }
+        public String InputDepid { get; set; }
+        public List<EmpSalary> InputJoinList { get; set; }
         public void OnGet(String inputDepName, List<EmpSalary> inputFilteredList)
         {
-            inputDepid = inputDepName;
-            inputJoinList = inputFilteredList;
-            ViewData["DeptList"] = inputJoinList;
+            InputDepid = inputDepName;
+            InputJoinList = inputFilteredList;
+            ViewData["DeptList"] = InputJoinList;
         }
 
     }

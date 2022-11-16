@@ -1,0 +1,41 @@
+﻿
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+    .card
+{
+    width: 15rem;
+}
+.card-img-top {
+    width : 250px;
+}
+.row {
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.Header2 {
+    margin-left: 40%;
+    color: #0074D9;
+}
+.ImgAboutUs {
+    width:550px;
+}
+.Header1 {
+    margin-left: 40%;
+    color: #0074D9;
+}
+.Button {
+    color: white;
+    background: #0074D9;
+    height: 30px;
+    left: 50%;
+    top: 36%;
+    position: absolute;
+    font-weight: bolder;
+    width: 315px;
+    border-radius: 20px;
+}
+.IndexPage {
+    width :100%;
+}
+

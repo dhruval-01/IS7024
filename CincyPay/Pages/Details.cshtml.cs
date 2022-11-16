@@ -60,10 +60,11 @@ namespace CincyPay.Pages
             List<EmpSalary> FinalFilteredList = new List<EmpSalary>();
             foreach (EmpSalary empSalary in salaryData)
             {
-                if (filterByDept.ContainsKey(empSalary.Jobcode))
+                if (filterByDept.ContainsKey(empSalary.JobCode))
                 {
                     FinalFilteredList.Add(empSalary);
                 }
+                
             }
             {
 

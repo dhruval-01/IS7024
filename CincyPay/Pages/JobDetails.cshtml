@@ -4,12 +4,13 @@
 @{
     List<EmpSalary> FinalFilteredList = new List<EmpSalary>();
     FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
-    String s = Model.inputDepid;
+    String s = Model.InputDepid;
 
 
 
 }
-<table>
+<link rel="stylesheet" type="text/css" href="~/css/JobDetails.css">
+<table class="center">
     <tr>
 
         <th>Job Title</th>
@@ -18,9 +19,11 @@
 
     </tr>
     @{
+        if (FinalFilteredList != null)
+        {
         foreach (EmpSalary empSalary in FinalFilteredList)
         {
-            if (empSalary.Jobcode.Equals(s))
+            if (empSalary.JobCode.Equals(s))
             {
                 <tr>
                     <td>empSalary.jobtitle</td>
@@ -33,7 +36,15 @@
 
 
         }
-
+        }
+        else
+        {
+        <tr>
+                <td>No Data Found</td>
+         <td>No Data Found</td>
+        <td>No Data Found</td>
+        </tr>
+        }
     }
 
 
