@@ -5,24 +5,12 @@
     ViewData["Title"] = "Home page";
     List<EmpSalary> salaryData = (List<EmpSalary>)ViewData["EmpSalary"];   
 }
-<style>
-    button:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+<link rel="stylesheet" href="~/css/index.css" type="text/css" />
 
-}
-</style>
 <div class="container" style="position:relative">
-    <img src="/Images/landing-bg.jpg" width="100%" />
+    <img src="/Images/landing-bg.jpg" width="100%" alt="Background Image" />
     <a asp-page="/SearchPage">
-    <button style="color: white;
-    background: #0074D9;
-    height: 30px;
-    left: 50%;
-    top: 36%;
-    position: absolute;
-    font-weight: bolder;
-    width: 315px;
-    border-radius: 20px;">
+    <button class="searchJobBtn">
         Search for Jobs!
         </button>
     </a>
@@ -32,7 +20,7 @@
 
     
 
-    <h2 style="margin-left:40%;color: #0074D9">What Do We Do?</h2>
+    <h2>What Do We Do?</h2>
     <div class="row">
         <div class="col">
             Are you a job seeker? Do you know which are the most booming jobs in the Cincinnati public sector? Do you know what job profiles pay the most? Our website will help you clear all your questions and help you get the right job...
@@ -45,31 +33,31 @@
             Helps you find your interest Department
         </div>
         <div class="col">
-            <img src="/Images/about-us.jpg" width="550px" />
+            <img src="/Images/about-us.jpg" width="550px" alt="About Us" />
         </div>
     </div>
     <hr />
-    <h2 style="margin-left:40%; color: #0074D9;">Explore our key features</h2>
+    <h2>Explore our key features</h2>
     <div style="margin-top:40px; margin-left:100px" class="row">
         <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img class="card-img-top" src="/Images/domains.png" width="250px" alt="Card image cap">
+            <div class="card card-width">
+                <img class="card-img-top" src="/Images/domains.png" width="250px" alt="Domain">
                 <div class="card-body">
                     <p class="card-text">Improve your job search reach by exploring multiple job profiles in the Cincinnati Public Sector</p>
                 </div>
             </div>
         </div>
         <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img class="card-img-top" src="/Images/salary.png" width="250px" alt="Card image cap">
+            <div class="card card-width">
+                <img class="card-img-top" src="/Images/salary.png" width="250px" alt="Salary">
                 <div class="card-body">
                     <p class="card-text">Compare jobs by pay and find the right fit for you</p>
                 </div>
             </div>
         </div>
         <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img class="card-img-top" src="/Images/demand.png" width="250px" alt="Card image cap">
+            <div class="card card-width">
+                <img class="card-img-top" src="/Images/demand.png" width="250px" alt="Demand">
                 <div class="card-body">
                     <p class="card-text">Get insights on the most booming and high paying jobs in Cincinnati</p>
                 </div>
