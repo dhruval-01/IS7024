@@ -157,24 +157,37 @@
 
     
     @{
-        foreach (EmpSalary empSalary in salaryData)
+        if (salaryData != null)
+        {
+            foreach (EmpSalary empSalary in salaryData)
+            {
+                <tr>
+                    <td>@empSalary.BusinessTitle</td>
+                    <td>@empSalary.Jobcode</td>
+                    <td>@empSalary.Location</td>
+                    <td>@empSalary.AnnualRt</td>
+                    <td>@empSalary.StdHours</td>
+                    <td>@empSalary.SalAdminPlan</td>
+                    <td>@empSalary.Jobtitle</td>
+                    <td>@empSalary.Deptname</td>
+               
+                </tr>
+            }
+        }
+        else
         {
             <tr>
+                    <td>Data Unavailable</td>
+                    <td>Data Unavailable</td>
+                    <td>Data Unavailable</td>
+                    <td>Data Unavailable</td>
+                    <td>Data Unavailable</td>
+                    <td>Data Unavailable</td>
+                    <td>Data Unavailable</td>
+                    <td>Data Unavailable</td>
                
-                
-                <td>@empSalary.BusinessTitle</td>
-                
-                <td>@empSalary.Jobcode</td>
-                <td>@empSalary.Location</td>
-                <td>@empSalary.AnnualRt</td>
-                <td>@empSalary.StdHours</td>
-                <td>@empSalary.SalAdminPlan</td>
-                <td>@empSalary.Jobtitle</td>
-                <td>@empSalary.Deptname</td>
-               
-            </tr>
+                </tr>
         }
-
     }
 
     </tbody>
