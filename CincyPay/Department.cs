@@ -11,22 +11,22 @@ namespace DepartmentData
     public partial class Department
     {
         [JsonProperty("department_codes")]
-        public string DepartmentCodes { get; set; }
+        public string? DepartmentCodes { get; set; }
 
         [JsonProperty("department")]
-        public string DepartmentDepartment { get; set; }
+        public string? DepartmentDepartment { get; set; }
 
         [JsonProperty("director", NullValueHandling = NullValueHandling.Ignore)]
-        public string Director { get; set; }
+        public string? Director { get; set; }
 
         [JsonProperty("department_main_website")]
-        public Uri DepartmentMainWebsite { get; set; }
+        public Uri? DepartmentMainWebsite { get; set; }
 
         [JsonProperty("department_contact_information")]
-        public Uri DepartmentContactInformation { get; set; }
+        public Uri? DepartmentContactInformation { get; set; }
 
         [JsonProperty("performance_goals_mission", NullValueHandling = NullValueHandling.Ignore)]
-        public string PerformanceGoalsMission { get; set; }
+        public string? PerformanceGoalsMission { get; set; }
     }
 
     public partial class Department

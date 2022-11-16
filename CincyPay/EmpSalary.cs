@@ -14,7 +14,7 @@ namespace EmpSalaryData
         public AgeRange AgeRange { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonProperty("sex")]
         public Sex Sex { get; set; }
@@ -23,45 +23,45 @@ namespace EmpSalaryData
         public Race Race { get; set; }
 
         [JsonProperty("business_title")]
-        public string BusinessTitle { get; set; }
+        public string? BusinessTitle { get; set; }
 
         [JsonProperty("deptid")]
-        public string Deptid { get; set; }
+        public string? DeptId { get; set; }
 
         [JsonProperty("jobcode")]
-        public string Jobcode { get; set; }
+        public string? JobCode { get; set; }
 
         [JsonProperty("position_nbr")]
-        public string PositionNbr { get; set; }
+        public string? PositionNbr { get; set; }
 
         [JsonProperty("location")]
-        public string Location { get; set; }
+        public string? Location { get; set; }
 
         [JsonProperty("job_entry_dt")]
         public DateTimeOffset JobEntryDt { get; set; }
 
         [JsonProperty("paygroup")]
-        public Paygroup Paygroup { get; set; }
+        public Paygroup PayGroup { get; set; }
 
         [JsonProperty("std_hours")]
         [JsonConverter(typeof(ParseStringConverter))]
         public long StdHours { get; set; }
 
         [JsonProperty("fte")]
-        public string Fte { get; set; }
+        public string? Fte { get; set; }
 
         [JsonProperty("sal_admin_plan")]
         public SalAdminPlan SalAdminPlan { get; set; }
 
         [JsonProperty("grade")]
-        public string Grade { get; set; }
+        public string? Grade { get; set; }
 
         [JsonProperty("step")]
         [JsonConverter(typeof(ParseStringConverter))]
         public long Step { get; set; }
 
         [JsonProperty("annual_rt")]
-        public string AnnualRt { get; set; }
+        public string? AnnualRt { get; set; }
 
         [JsonProperty("eeo_job_group", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(ParseStringConverter))]
@@ -71,16 +71,16 @@ namespace EmpSalaryData
         public JobFamily? JobFamily { get; set; }
 
         [JsonProperty("jobtitle")]
-        public string Jobtitle { get; set; }
+        public string? JobTitle { get; set; }
 
         [JsonProperty("jobtitle_abbrv")]
-        public string JobtitleAbbrv { get; set; }
+        public string? JobTitleAbbrv { get; set; }
 
         [JsonProperty("deptname")]
-        public string Deptname { get; set; }
+        public string? DeptName { get; set; }
 
         [JsonProperty("deptname_abbrv")]
-        public string DeptnameAbbrv { get; set; }
+        public string? DeptnameAbbrv { get; set; }
 
         [JsonProperty("hire_date")]
         public DateTimeOffset HireDate { get; set; }
