@@ -64,10 +64,7 @@ namespace CincyPay.Pages
                 {
                     FinalFilteredList.Add(empSalary);
                 }
-                else
-                {
-
-                }
+                
             }
             {
 
