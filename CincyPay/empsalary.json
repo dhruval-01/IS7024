@@ -2,10 +2,10 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
   "items": {
-    "$ref": "#/definitions/EmpSalaryElementElement"
+    "$ref": "#/definitions/EmpSalaryElement"
   },
   "definitions": {
-    "EmpSalaryElementElement": {
+    "EmpSalaryElement": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -63,10 +63,6 @@
         "annual_rt": {
           "type": "string"
         },
-        "eeo_job_group": {
-          "type": "string",
-          "format": "integer"
-        },
         "job_family": {
           "$ref": "#/definitions/JobFamily"
         },
@@ -85,6 +81,10 @@
         "hire_date": {
           "type": "string",
           "format": "date-time"
+        },
+        "eeo_job_group": {
+          "type": "string",
+          "format": "integer"
         }
       },
       "required": [
@@ -110,30 +110,29 @@
         "std_hours",
         "step"
       ],
-      "title": "EmpSalaryElementElement"
+      "title": "EmpSalaryElement"
     },
     "AgeRange": {
       "type": "string",
       "enum": [
-        "31-40",
-        "18-25",
         "41-50",
-        "51-60",
-        "26-30",
+        "31-40",
         "61-70",
+        "51-60",
+        "18-25",
         "OVER 70",
-        "UNDER 18"
+        "26-30"
       ],
       "title": "AgeRange"
     },
     "JobFamily": {
       "type": "string",
       "enum": [
+        "D5ADM",
+        "D8SMG",
+        "D1AFS",
         "D0MGM",
         "D4PT",
-        "D1AFS",
-        "D8SMG",
-        "D5ADM",
         "D2FIR",
         "D7LAW",
         "D2POL",
@@ -155,12 +154,12 @@
     "Race": {
       "type": "string",
       "enum": [
+        "AMERICAN INDIAN/ALASKAN NATIVE",
         "WHITE",
-        "BLACK",
         "ASIAN/PACIFIC ISLANDER",
+        "BLACK",
         "HISPANIC",
         "UNKNOWN",
-        "AMERICAN INDIAN/ALASKAN NATIVE",
         "CHINESE"
       ],
       "title": "Race"
@@ -168,17 +167,18 @@
     "SalAdminPlan": {
       "type": "string",
       "enum": [
-        "D0C",
-        "D0",
-        "D4",
-        "D1",
-        "D8",
         "D5",
-        "F48",
-        "F40",
-        "LAW",
+        "D8",
+        "D1",
+        "D1T",
+        "D0C",
         "D4M",
+        "F48",
+        "D4",
+        "D0",
+        "LAW",
         "POL",
+        "F40",
         "D3",
         "D9"
       ],

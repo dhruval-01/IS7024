@@ -2,40 +2,60 @@
 @using EmpSalaryData;
 @model CincyPay.Pages.JobDetailsModel
 @{
-    List<EmpSalary> FinalFilteredList = new List<EmpSalary>();
-    FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
+    List<EmpSalary> FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
     String s = Model.inputDepid;
-
-
-
+    Dictionary<String, float> d = new Dictionary<string, float>();
+    Dictionary<String, int> dCount = new Dictionary<string, int>();
+    int count = 0;
 }
-<table>
-    <tr>
 
-        <th>Job Title</th>
-        <th>Hours per week</th>
-        <th>Salary</th>
-
-    </tr>
     @{
         foreach (EmpSalary empSalary in FinalFilteredList)
         {
+
             if (empSalary.Jobcode.Equals(s))
             {
-                <tr>
-                    <td>empSalary.jobtitle</td>
-                    <td>empSalary.std_hours</td>
-                    <td>empSalary.annual_rt</td>
-                </tr>
+                if (!d.ContainsKey(empSalary.Jobtitle))
+                {
+                    d.Add(empSalary.Jobtitle, float.Parse(empSalary.AnnualRt));
+                    dCount.Add(empSalary.Jobtitle, 1);
+                }
+                else
+                {
+                    d[empSalary.Jobtitle] = d[empSalary.Jobtitle] + float.Parse(empSalary.AnnualRt);
+                    dCount[empSalary.Jobtitle] = dCount[empSalary.Jobtitle] + 1;
 
+                }
+                count = count + 1;
             }
-
-
-
         }
-
+        if(count==0)
+        {
+            <p>Currently no jobs available!</p>
+        }
+        else
+        {
+            <table>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Hours per week</th>
+                    <th>Salary</th>
+                    <th>Vacancy</th>
+                </tr>
+            @{
+                foreach(var item in d)
+                {
+                    String k = item.Key;
+                    <tr>
+                            <td>@item.Key</td>
+                            <td>40</td>
+                            <td>@(item.Value/dCount[k])</td>
+                            <td>@dCount[k]</td>
+                        </tr>
+                    }
+                }
+            </table>
+        }
     }
 
-
-</table>
 
