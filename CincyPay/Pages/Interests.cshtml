@@ -1,0 +1,96 @@
+﻿@page
+@model CincyPay.Pages.InterestsModel
+@{
+}
+<style>
+    .heading {
+        font-family: 'Open Sans', sans-serif;
+        color: #0074D9;
+
+    }
+   .left{
+       margin-top:55px;
+   }
+   .right{
+           box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+     height: 500px;
+     margin-top: 3%;
+   }
+   .inputfield{
+        background-color: rgb(250, 251, 252);
+                     border-color: rgb(223, 225, 230);
+                     color: rgb(9, 30, 66);
+                     cursor: text;
+                     border-radius: 3px;
+                     border-width: 2px;
+                     border-style: solid;
+                     box-sizing: border-box;
+                     font-size: 14px;
+                     transition: background-color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s;
+                     line-height: 1.42857;
+                     padding: 8px 6px;
+                     height: 36px;
+                          margin-left: 30px;
+     width: 42%;
+          margin-top: 25px;
+   }
+    .inputfield:hover{
+                         background-color: rgb(235, 236, 240);
+                     }
+                    .inputfield :focus{
+                         background-color: rgb(255, 255, 255);
+                         border-color: rgb(76, 154, 255);
+                     }
+                     .itrform{
+                         margin-top:40px
+                     }
+                     .txtarea{
+                          width: 90%;
+     height: 175px;
+                     }
+                     .submit{
+                          display: inline-block;
+                 outline: 0;
+                 cursor: pointer;
+                 border: none;
+                 padding: 0 56px;
+                 height: 45px;
+                 line-height: 45px;
+                 border-radius: 7px;
+                 background-color: #0070f3;
+                 color: white;
+                 font-weight: 400;
+                 font-size: 16px;
+                 box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+                 transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+        margin-left: 33%;
+        margin-top: 5%;
+                     }
+                      .submit:hover{
+                     background: rgba(0,118,255,0.9);
+                     box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+                     
+                 }
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col left">
+            <h2 class="heading">Let's Talk About Your Interests! </h2>
+            <p>Give us a brief outline of your interests to help us reach you better.</p>
+            <img src="~/Images/resume.jpg" width="500px" />
+        </div>
+        <div class="col right">
+            <form class="itrform" action="mailto:email@example.com" enctype="text/plain">
+            <input type="text" class="inputfield" placeholder="Your First Name" />
+            <input type="text" class="inputfield" placeholder="Your Last Name" /><br />
+            <input type="text" class="inputfield" style="width:90%" placeholder="Your Email Address" /><br />
+            <textarea class="inputfield txtarea" cols="100" placeholder="Enter your Interests."></textarea>
+            <button class="submit" type="submit">Submit Data!</button>
+            </form>
+        </div>
+    </div>
+
+   
+
+</div>
