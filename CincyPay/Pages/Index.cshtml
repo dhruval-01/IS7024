@@ -10,31 +10,202 @@
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
 }
+.heading{
+            font-family: 'Lilita One', cursive;
+        margin-top: 55%;
+        font-size: 60px;
+        color: #0074D9;
+}
+.subheading{
+    font-family:'Spectral',cursive;
+}
+.searchbtn{
+            color: white;
+        background: #0074D9;
+        height: 41px;
+        /* left: 50%; */
+        top: 67%;
+        position: absolute;
+        width: 315px;
+        border-radius: 12px;
+        font-size: 25px;
+        border:0px
+    }
+    .aboutus{
+        margin-top:80px
+    }
+        .profile-card-3 {
+      font-family: 'Open Sans', Arial, sans-serif;
+      position: relative;
+      float: left;
+      overflow: hidden;
+      width: 100%;
+      text-align: center;
+      height:368px;
+      border:none;
+    }
+    .profile-card-3 .background-block {
+        float: left;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    .profile-card-3 .background-block .background {
+      width:100%;
+      vertical-align: top;
+      opacity: 0.9;
+      -webkit-filter: blur(0.5px);
+      filter: blur(0.5px);
+       -webkit-transform: scale(1.8);
+      transform: scale(2.8);
+    }
+    .profile-card-3 .card-content {
+      width: 100%;
+      padding: 15px 25px;
+      color:#232323;
+      float:left;
+      background:#efefef;
+      height:50%;
+      border-radius:0 0 5px 5px;
+      position: relative;
+      z-index: 9999;
+    }
+    .profile-card-3 .card-content::before {
+        content: '';
+        background: #efefef;
+        width: 120%;
+        height: 100%;
+        left: 11px;
+        bottom: 51px;
+        position: absolute;
+        z-index: -1;
+        transform: rotate(-13deg);
+    }
+    .profile-card-3 .profile {
+      border-radius: 50%;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      max-width: 100px;
+      opacity: 1;
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(255, 255, 255, 1);
+      -webkit-transform: translate(-50%, 0%);
+      transform: translate(-50%, 0%);
+      z-index:99999;
+    }
+    .profile-card-3 h2 {
+      margin: 0 0 5px;
+      font-weight: 600;
+      font-size:25px;
+    }
+    .profile-card-3 h2 small {
+      display: block;
+      font-size: 15px;
+      margin-top:10px;
+    }
+    .profile-card-3 i {
+      display: inline-block;
+        font-size: 16px;
+        color: #232323;
+        text-align: center;
+        border: 1px solid #232323;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        margin:0 5px;
+    }
+    .profile-card-3 .icon-block{
+        float:left;
+        width:100%;
+        margin-top:15px;
+    }
+    .profile-card-3 .icon-block a{
+        text-decoration:none;
+    }
+    .profile-card-3 i:hover {
+      background-color:#232323;
+      color:#fff;
+      text-decoration:none;
+    }
+    .smallheadings{
+            margin-left:40%; color: #0074D9;
+            margin-bottom:50px
+    }
+        .button-8 {
+      background-color: #e1ecf4;
+      border-radius: 3px;
+      border: 1px solid #7aa7c7;
+      box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+      box-sizing: border-box;
+      color: #39739d;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.15385;
+      margin: 0;
+      outline: none;
+      padding: 8px .8em;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: baseline;
+      white-space: nowrap;
+    }
+
+    .button-8:hover,
+    .button-8:focus {
+      background-color: #b3d3ea;
+      color: #2c5777;
+    }
+
+    .button-8:focus {
+      box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+    }
+
+    .button-8:active {
+      background-color: #a0c7e4;
+      box-shadow: none;
+      color: #2c5777;
+    }
+    hr{
+        margin-top:50px;
+        margin-bottom:50px
+    }
+}
+
 </style>
 <div class="container" style="position:relative">
-    <img src="/Images/landing-bg.jpg" width="100%" />
-    <a asp-page="/SearchPage">
-    <button style="color: white;
-    background: #0074D9;
-    height: 30px;
-    left: 50%;
-    top: 36%;
-    position: absolute;
-    font-weight: bolder;
-    width: 315px;
-    border-radius: 20px;">
-        Search for Jobs!
-        </button>
-    </a>
-</div>
+    <div class="row" style="margin-right: -89px;">
+        <div class="col">
+            <h2 class="heading">Welcome to CincyPay</h2>
+            <h6 class="subheading">Community where you can find the right jobs.</h6>
+            <a asp-page="/SearchPage">
+                <button class="searchbtn">
+                    Search for Jobs!
+                </button>
+            </a>
+        </div>
+        <div class="col">
+            <img width="990px" src="~/Images/newhome.jpg" />
+        </div>
+    </div>
+</div> 
 <hr />
 <div class="container">
 
     
 
-    <h2 style="margin-left:40%;color: #0074D9">What Do We Do?</h2>
+    <h2 class="smallheadings">What Do We Do?</h2>
     <div class="row">
         <div class="col">
+            <p align="justify" class="aboutus">
             Are you a job seeker? Do you know which are the most booming jobs in the Cincinnati public sector? Do you know what job profiles pay the most? Our website will help you clear all your questions and help you get the right job...
 
             Display Job Opportunities available in the city's public sector
@@ -43,19 +214,20 @@
             Shows you the recent hiring trends for the role you are seeking
             Job Type (Full Time or Part Time)
             Helps you find your interest Department
+            </p>
         </div>
         <div class="col">
             <img src="/Images/about-us.jpg" width="550px" />
         </div>
     </div>
     <hr />
-    <h2 style="margin-left:40%; color: #0074D9;">Explore our key features</h2>
+    <h2 class="smallheadings">Explore our key features</h2>
     <div style="margin-top:40px; margin-left:100px" class="row">
         <div class="col">
             <div class="card" style="width: 15rem;">
                 <img class="card-img-top" src="/Images/domains.png" width="250px" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Improve your job search reach by exploring multiple job profiles in the Cincinnati Public Sector</p>
+                    <p class="card-text">Display job opportunities available in the city's public sector.</p>
                 </div>
             </div>
         </div>
@@ -63,7 +235,7 @@
             <div class="card" style="width: 15rem;">
                 <img class="card-img-top" src="/Images/salary.png" width="250px" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Compare jobs by pay and find the right fit for you</p>
+                    <p class="card-text">Give insights into the salaries paid for the different job roles.</p>
                 </div>
             </div>
         </div>
@@ -71,9 +243,90 @@
             <div class="card" style="width: 15rem;">
                 <img class="card-img-top" src="/Images/demand.png" width="250px" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Get insights on the most booming and high paying jobs in Cincinnati</p>
+                    <p class="card-text">Shows you the the recent hiring treds for the role you are seeking.</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <hr />
+    <h2 class="smallheadings">
+        Meet our team!</h2>
+    <div class="newcontainer">
+    <div class="row">
+    <div class="col-md-3">
+        <div class="card profile-card-3">
+            <div class="background-block">
+                        <img src="https://archello.s3.eu-central-1.amazonaws.com/images/2019/09/25/UCLCB-Exteriors-AFradkin-4297.1569425525.1022.jpg" alt="profile-sample1" class="background" />
+            </div>
+            <div class="profile-thumb-block">
+                <img src="/Images/dhruv.png" alt="profile-image" class="profile" />
+            </div>
+            <div class="card-content">
+                <h2>
+                    Dhruv Chheda<small>Backend Developer</small></h3>
+                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
+            </div>
+        </div>
+    </div>
+            <div class="col-md-3">
+                <div class="card profile-card-3">
+                    <div class="background-block">
+                        <img src="https://archello.s3.eu-central-1.amazonaws.com/images/2019/09/25/UCLCB-Exteriors-AFradkin-4297.1569425525.1022.jpg" alt="profile-sample1" class="background" />
+                    </div>
+                    <div class="profile-thumb-block">
+                        <img src="/Images/adarsh2.png" alt="profile-image" class="profile" />
+                    </div>
+                    <div class="card-content">
+                        <h2>
+                            Adarsh Joshi<small>Backend Developer</small></h3>
+                            <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card profile-card-3">
+                    <div class="background-block">
+                        <img src="https://archello.s3.eu-central-1.amazonaws.com/images/2019/09/25/UCLCB-Exteriors-AFradkin-4297.1569425525.1022.jpg" alt="profile-sample1" class="background" />
+                    </div>
+                    <div class="profile-thumb-block">
+                        <img src="/Images/yash.png" alt="profile-image" class="profile" />
+                    </div>
+                    <div class="card-content">
+                        <h2>
+                            Yash Karve<small>Scrum Master</small></h3>
+                            <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3">
+            <div class="card profile-card-3">
+            <div class="background-block">
+                        <img src="https://archello.s3.eu-central-1.amazonaws.com/images/2019/09/25/UCLCB-Exteriors-AFradkin-4297.1569425525.1022.jpg" alt="profile-sample1" class="background" />
+            </div>
+            <div class="profile-thumb-block">
+                <img src="/Images/lokesh.png" alt="profile-image" class="profile" />
+            </div>
+            <div class="card-content">
+                <h2>
+                    Lokesh Rs<small>FrontEnd Developer</small></h3>
+                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <hr />
+
+    <h2 class="smallheadings">Tell Us Your Interests!</h2>
+    <div class="row">
+        <div class="col">
+            
+    <p style="margin-top:110px" align="justify">Help us serve you better by providing us with your interested job profiles. We will then analyze your profile and send it out to top recruiters in and around Cincinnati. This will help you getting a better reach and will ease the process of finding dream job.</p>
+    <button class="button-8">Fill the Form</button>
+        </div>
+        <div class="col">
+            <img style="margin-left:100px" src="/Images/interests.jpg" width="400px" />
+            
         </div>
     </div>
 </div>
