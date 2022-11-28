@@ -4,58 +4,210 @@
 @{
     List<EmpSalary> FinalFilteredList = (List<EmpSalary>)ViewData["EmpSalary"];
     String s = Model.inputDepid;
+    String name = Model.inputName;
     Dictionary<String, float> d = new Dictionary<string, float>();
     Dictionary<String, int> dCount = new Dictionary<string, int>();
     int count = 0;
 }
+<style>
+    .nojobsimg{
+        width: 800px;
+        float: right;
+        margin-left: 35%;
+        margin-top: 5%;
+    }
+    .nojobstitle{
+        margin-top: 100px;
+        position: absolute;
+        color:#0074D9;
+        font-family: 'Cabin', sans-serif;
+    }
+    .jobs{
+        float:right;
+    }
+    .grad{
+        background-image: linear-gradient(to right, #0074D9 , white);
+            width: 107%;
+    margin-left: -87px;
+    margin-top: -18px;
+    }
+    .jobsheading1{
+        font-family: 'Anton', sans-serif;
+        color:white;
+        margin-top:80px;
+        margin-left:50px
+    }
+    .jobsheading2{
 
-    @{
-        foreach (EmpSalary empSalary in FinalFilteredList)
-        {
-
-            if (empSalary.Jobcode.Equals(s))
-            {
-                if (!d.ContainsKey(empSalary.Jobtitle))
-                {
-                    d.Add(empSalary.Jobtitle, float.Parse(empSalary.AnnualRt));
-                    dCount.Add(empSalary.Jobtitle, 1);
-                }
-                else
-                {
-                    d[empSalary.Jobtitle] = d[empSalary.Jobtitle] + float.Parse(empSalary.AnnualRt);
-                    dCount[empSalary.Jobtitle] = dCount[empSalary.Jobtitle] + 1;
-
-                }
-                count = count + 1;
-            }
-        }
-        if(count==0)
-        {
-            <p>Currently no jobs available!</p>
-        }
-        else
-        {
-            <table>
-                <tr>
-                    <th>Job Title</th>
-                    <th>Hours per week</th>
-                    <th>Salary</th>
-                    <th>Vacancy</th>
-                </tr>
-            @{
-                foreach(var item in d)
-                {
-                    String k = item.Key;
-                    <tr>
-                            <td>@item.Key</td>
-                            <td>40</td>
-                            <td>@(item.Value/dCount[k])</td>
-                            <td>@dCount[k]</td>
-                        </tr>
-                    }
-                }
-            </table>
-        }
+        font-family: 'Cabin', sans-serif;
+        color:white;
+        margin-left:50px
+    }
+        .order-card {
+        color: #fff;
     }
 
+    .bg-c-blue {
+        background: linear-gradient(45deg,#4099ff,#73b4ff);
+    }
+
+    .bg-c-green {
+        background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+    }
+
+    .bg-c-yellow {
+        background: linear-gradient(45deg,#FFB64D,#ffcb80);
+    }
+
+    .bg-c-pink {
+        background: linear-gradient(45deg,#FF5370,#ff869a);
+    }
+
+
+    .card {
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+        border: none;
+        margin-bottom: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card .card-block {
+        padding: 25px;
+    }
+
+    .order-card i {
+        font-size: 26px;
+    }
+
+    .f-left {
+        float: left;
+    }
+
+    .f-right {
+        float: right;
+    }
+    .cardsrow{
+        margin-top:50px
+    }
+    span{
+        margin-left:15px
+    }
+</style>
+
+@{
+    foreach (EmpSalary empSalary in FinalFilteredList)
+    {
+
+        if (empSalary.Jobcode.Equals(s))
+        {
+            if (!d.ContainsKey(empSalary.Jobtitle))
+            {
+                d.Add(empSalary.Jobtitle, float.Parse(empSalary.AnnualRt));
+                dCount.Add(empSalary.Jobtitle, 1);
+            }
+            else
+            {
+                d[empSalary.Jobtitle] = d[empSalary.Jobtitle] + float.Parse(empSalary.AnnualRt);
+                dCount[empSalary.Jobtitle] = dCount[empSalary.Jobtitle] + 1;
+
+            }
+            count = count + 1;
+        }
+    }
+    if (count == 0)
+    {
+    <div class="container">
+                        <h1 class="nojobstitle">Sorry! There are currently no vacancies in the department you selected.<br> Please try other departments!</h1>
+                        <img class="nojobsimg" src="~/Images/nojobs.jpg">
+                        
+    </div>
+    }
+    else
+    {
+        /*  <table>
+                              <tr>
+                              <th>Job Title</th>
+                              <th>Hours per week</th>
+                              <th>Salary</th>
+                              <th>Vacancy</th>
+                          </tr>
+                      @{
+                      foreach(var item in d)
+                          {
+                          String k = item.Key;
+                                          <tr>
+                                          <td>@item.Key</td>
+                                          <td>40</td>
+                                          <td>@(item.Value/dCount[k])</td>
+                                          <td>@dCount[k]</td>
+                                      </tr>
+                          }
+          }
+          </table> */
+
+    <div class="row grad">
+                        <div class="col">
+                            <h2 class="jobsheading1">Jobs At</h2>
+                            <h2 class="jobsheading2">@name</h2>
+                        </div>
+                        <div class="col">
+                            <img class="jobs" width="350px" src="~/Images/jobs2.png" >
+                        </div>
+    </div>
+    
+            foreach (var item in d)
+            {
+                 String k = item.Key;
+                        /*         <tr>
+                                 <td>@item.Key</td>
+                                 <td>40</td>
+                                 <td>@(item.Value/dCount[k])</td>
+                                 <td>@dCount[k]</td>
+                </tr> */
+    <div class="row cardsrow">
+                                    <div class="col-md-4 col-xl-5">
+                                        <div class="card bg-c-blue order-card">
+                                            <div class="card-block">
+                                                <h6 class="m-b-20">Job Role</h6>
+                                                <h2 class="text-right">@item.Key</h2>
+                                <p class="m-b-0">According to the latest information available*</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-xl-3">
+                                        <div class="card bg-c-blue order-card">
+                                            <div class="card-block">
+                                                <h6 class="m-b-20">Average Salary</h6>
+                                                <h2 class="text-right"><i class="fa fa-money"></i><span>@(
+                                item.Value / dCount[k]
+                                            )
+                                    </span>
+                                </h2>
+                                <p class="m-b-0">According to the latest information available*</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-xl-3">
+                                        <div class="card bg-c-blue order-card">
+                                            <div class="card-block">
+                                                <h6 class="m-b-20">Vacancies</h6>
+                                                <h2 class="text-right"><i class="fa fa-male"></i><span>@dCount[k]</span></h2>
+
+                                <p class="m-b-0">According to the latest information available*</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+    </div>
+            }
+    }
+
+    
+    }
 

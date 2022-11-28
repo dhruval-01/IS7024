@@ -11,6 +11,7 @@ namespace CincyPay.Pages
     public class JobDetailsModel : PageModel
     {
         public String inputDepid { get; set; }
+        public String inputName { get; set; }
         //public List<EmpSalary> inputJoinList { get; set; }
         //public void OnGet(String inputDepName, List<EmpSalary> inputFilteredList)
         //{
@@ -19,9 +20,10 @@ namespace CincyPay.Pages
         //    ViewData["DeptList"] = inputJoinList;
         //}
         static readonly HttpClient client = new HttpClient();
-        public void OnGet(String inputDepName)
+        public void OnGet(String inputDepName,String stringName)
         {
             inputDepid = inputDepName;
+            inputName = stringName;
             var task = client.GetAsync("https://data.cincinnati-oh.gov/resource/wmj4-ygbf.json");
             HttpResponseMessage result = task.Result;
             List<EmpSalary> salaryData = new List<EmpSalary>();

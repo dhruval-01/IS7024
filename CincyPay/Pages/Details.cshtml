@@ -62,7 +62,38 @@
         ::-webkit-scrollbar-thumb:hover {
             background: gainsboro;
         }
+        .parent
+{
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.parent:focus
+{
+    outline: none;
+}
+
+.slide
+{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    -webkit-transition: top 1s;
+    -moz-transition: top 1s;
+}
+
+.parent:focus + .slide
+{
+    top: 50px;
+    -webkit-transition: top 1s;
+}
 </style>
+<script type="text/javascript">
+    function showHideRow(row) {
+        $("#" + row).toggle();
+    }
+</script>
 <div style="overflow-y:hidden;">
     <div class="left">
 
@@ -76,13 +107,17 @@
                 }
                 else
                 {
-                    <a href="/JobDetails?inputDepName=@empSalary.DepartmentCodes">
+                    <a href="/JobDetails?inputDepName=@empSalary.DepartmentCodes&stringName=@empSalary.DepartmentDepartment">
                         <div class="card" style="margin-top:6px">
-                            <div class="card-body">
-                                <span>  @empSalary.DepartmentDepartment</span>
+                            <div  class="card-body">
+                            
+                                @empSalary.DepartmentDepartment
+                           
                             </div>
+                        
                         </div>
                     </a>
+                   
                     d.Add(empSalary.DepartmentDepartment, 1);
                 }
 
