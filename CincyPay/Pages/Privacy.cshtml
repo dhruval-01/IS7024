@@ -1,8 +1,8 @@
 ﻿@page
 @model PrivacyModel
-@using MovieData
+@using Recipes
 @{
-    Movie movies = (Movie)ViewData["MovieData"];
+    RecipeClass recipe = (RecipeClass)ViewData["RecipeData"];
 
     ViewData["Title"] = "Privacy Policy";
 }
@@ -108,13 +108,18 @@
     <table cellpadding="0" cellspacing="0" border="0">
         <thead>
             <tr>
-                <th>Crew</th>
-                <th>Title</th>
-                <th>FullTitle</th>
-                <th>Year</th>
-                <th>Rank</th>
-                <th>ImDbRating</th>
-                <th>Title</th>
+                <th>Name</th>
+                <th>Sugar in Grams</th>
+                <th>Fiber in Grams</th>
+                <th>Serving Size in Grams</th>
+                <th>Sodium in mg</th>
+                <th>Potassium in mg</th>
+                <th>Fat Saturated in mg</th>
+                <th>Fat Total in grams</th>
+                <th>Calories</th>
+                <th>Cholestrol in mg</th>
+                <th>Protein in grams</th>
+                <th>Carbohydrates in grams</th>
             </tr>
         </thead>
     </table>
@@ -124,16 +129,20 @@
       
     <tbody>
         @{
-            foreach (Item item in movies.Items)
+                foreach (Item item in recipe.NutriCalories.Items)
             {
                     <tr>
-                        <td>@item.Crew</td>
-                        <td>@item.Title</td>
-                        <td>@item.FullTitle</td>
-                        <td>@item.Year</td>
-                        <td>@item.Rank</td>
-                        <td>@item.ImDbRating</td>
-                        <td>@item.Title</td>
+                        <td>@item.Name</td>
+                        <td>@item.SugarG</td>
+                        <td>@item.FiberG</td>
+                        <td>@item.ServingSizeG</td>
+                        <td>@item.SodiumMg</td>
+                        <td>@item.PotassiumMg</td>
+                        <td>@item.FatSaturatedG</td>
+                        <td>@item.CholesterolMg</td>
+                        <td>@item.ProteinG</td>                   
+
+
                         
                     </tr>
                     
