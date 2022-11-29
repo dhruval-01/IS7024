@@ -13,7 +13,9 @@
           "$ref": "#/definitions/AgeRange"
         },
         "name": {
-          "type": "string"
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 65
         },
         "sex": {
           "$ref": "#/definitions/Sex"
@@ -34,7 +36,9 @@
           "type": "string"
         },
         "location": {
-          "type": "string"
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 65
         },
         "job_entry_dt": {
           "type": "string",
@@ -67,13 +71,17 @@
           "$ref": "#/definitions/JobFamily"
         },
         "jobtitle": {
-          "type": "string"
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 65
         },
         "jobtitle_abbrv": {
           "type": "string"
         },
         "deptname": {
-          "type": "string"
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 65
         },
         "deptname_abbrv": {
           "type": "string"
