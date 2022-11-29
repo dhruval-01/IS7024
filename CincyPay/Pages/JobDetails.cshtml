@@ -100,22 +100,27 @@
 @{
     foreach (EmpSalary empSalary in FinalFilteredList)
     {
-
-        if (empSalary.Jobcode.Equals(s))
-        {
-            if (!d.ContainsKey(empSalary.Jobtitle))
+        if (FinalFilteredList != null)
+        { 
+            if (empSalary.JobCode.Equals(s))
             {
-                d.Add(empSalary.Jobtitle, float.Parse(empSalary.AnnualRt));
-                dCount.Add(empSalary.Jobtitle, 1);
-            }
-            else
-            {
-                d[empSalary.Jobtitle] = d[empSalary.Jobtitle] + float.Parse(empSalary.AnnualRt);
-                dCount[empSalary.Jobtitle] = dCount[empSalary.Jobtitle] + 1;
+                if (!d.ContainsKey(empSalary.Jobtitle))
+                {
+                    d.Add(empSalary.Jobtitle, float.Parse(empSalary.AnnualRt));
+                    dCount.Add(empSalary.Jobtitle, 1);
+                }
+                else
+                {
+                    d[empSalary.Jobtitle] = d[empSalary.Jobtitle] + float.Parse(empSalary.AnnualRt);
+                    dCount[empSalary.Jobtitle] = dCount[empSalary.Jobtitle] + 1;
 
+                }
+                count = count + 1;
             }
-            count = count + 1;
+            
         }
+
+       
     }
     if (count == 0)
     {
