@@ -43,6 +43,6 @@ app.MapGet("/CincyPayJobs/v2", async () =>
 
 
 })
-.WithName("RestaurantList");
+.WithName("CincyPayJobs");
 
 app.Run();
