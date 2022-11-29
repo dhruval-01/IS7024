@@ -1,15 +1,19 @@
 ﻿using EmpSalaryData;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
-
-namespace CincyPay.Pages
-{
+using ShortCutspace;
+/*namespace Roster19FS7024.Pages;*/
+namespace CincyPay.Pages;
     public class IndexModel : PageModel
     {
         static readonly HttpClient client = new HttpClient();
 
         private readonly ILogger<IndexModel> _logger;
+
+        [BindProperty]
+        public ShortCutspace.Shortcut shortcut { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -41,7 +45,16 @@ namespace CincyPay.Pages
             }
 
             ViewData["EmpSalary"] = salaryData;
+            ViewData["ShortcutList"] = ShortCutspace.ShortcutRoster.allShortcuts;
 
         }
+
+    public void OnPost()
+    {
+        // update the local map. 
+        string stuff = shortcut.FirstName + shortcut.LastName + shortcut.Email + shortcut.Interests;
+        ShortcutRoster.allShortcuts.Add(shortcut);
+
+        ViewData["ShortcutList"] = ShortcutRoster.allShortcuts;
     }
 }

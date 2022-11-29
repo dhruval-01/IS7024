@@ -1,0 +1,24 @@
+﻿@page
+@model CincyPay.Pages.FormModel
+@{
+    var shortcuts = (IList<ShortCutspace.Shortcut>)ViewData["ShortcutList"];
+}
+
+<div>
+    <hr />
+    <table border="1" width="90%">
+        <tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Interests</th></tr>
+        @{
+
+            foreach (ShortCutspace.Shortcut shortcut in shortcuts)
+            {
+                <tr>
+                    <td>@shortcut.FirstName</td>
+                    <td> @shortcut.LastName </td>
+                    <td>@shortcut.Email</td>
+                    <td>@shortcut.Interests </td>
+                </tr>
+            }
+
+        }
+    </table>
