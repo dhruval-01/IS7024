@@ -11,6 +11,7 @@ Are you a job seeker? Do you know which are the most booming jobs in the Cincinn
 * Shows you the recent hiring trends for the role you are seeking
 * Job Type (Full Time or Part Time)
 * Helps you find your interest Department
+* With live recruitment analytics gets insigts of the job market 
 
 # DataFeeds
 
