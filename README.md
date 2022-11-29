@@ -31,7 +31,7 @@ Assuming that an individual is eligible to take up a job role of a <strong>Polic
 
 1.1
 <strong>Given</strong> a feed of employee salary data and salary schedule is available <br>
-   <strong>When</strong> I search for "Senior Engineer-EXM" <br>
+   <strong>When</strong> I look for "Senior Engineer-EXM" <br>
    <strong>Then</strong> I should receive at least one result with these attributes:<br>
    Department name: "CWW Plant Plan & Spec. Studies"<br>
    Location : "WAEPLANSTD"	<br>
@@ -46,7 +46,7 @@ Assuming that an individual is eligible to take up a job role of a <strong>Polic
  
  1.3
 <strong>Given</strong> a feed of employee salary data and salary schedule is available <br/>
-<strong>When</strong> I search for “dbshdghsdu” <br/>
+<strong>When</strong> I look for “dbshdghsdu” <br/>
 <strong>Then:</strong> I should receive no results (an empty list)
    
    
