@@ -19,13 +19,13 @@ namespace CincyPay.Pages
             if (result.IsSuccessStatusCode)
             {
                 Task<string> readString = result.Content.ReadAsStringAsync();
-                string jsonString = readString.Result;
+                string jobDetails = readString.Result;
                 JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("empsalary.json"));
-                JArray jsonArray = JArray.Parse(jsonString);
+                JArray jsonArray = JArray.Parse(jobDetails);
                 IList<string> validationEvents = new List<string>();
                 if (jsonArray.IsValid(schema, out validationEvents))
                 {
-                    salaryData = EmpSalary.FromJson(jsonString);
+                    salaryData = EmpSalary.FromJson(jobDetails);
                 }
                 else
                 {
@@ -60,7 +60,7 @@ namespace CincyPay.Pages
             List<EmpSalary> FinalFilteredList = new List<EmpSalary>();
             foreach (EmpSalary empSalary in salaryData)
             {
-                if (filterByDept.ContainsKey(empSalary.Jobcode))
+                if (filterByDept.ContainsKey(empSalary.JobCode))
                 {
                     FinalFilteredList.Add(empSalary);
                 }
@@ -82,13 +82,13 @@ namespace CincyPay.Pages
         //    if (result.IsSuccessStatusCode)
         //    {
         //        Task<string> readString = result.Content.ReadAsStringAsync();
-        //        string jsonString = readString.Result;
+        //        string jobDetails = readString.Result;
         //        JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("empsalary.json"));
-        //        JArray jsonArray = JArray.Parse(jsonString);
+        //        JArray jsonArray = JArray.Parse(jobDetails);
         //        IList<string> validationEvents = new List<string>();
         //        if (jsonArray.IsValid(schema, out validationEvents))
         //        {
-        //            salaryData = EmpSalary.FromJson(jsonString);
+        //            salaryData = EmpSalary.FromJson(jobDetails);
         //        }
         //        else
         //        {
@@ -116,7 +116,7 @@ namespace CincyPay.Pages
         //    List<EmpSalary> FinalFilteredList = new List<EmpSalary>();
         //    foreach (EmpSalary empSalary in salaryData)
         //    {
-        //        if (filterByDept.ContainsKey(empSalary.Jobcode))
+        //        if (filterByDept.ContainsKey(empSalary.JobCode))
         //        {
         //            FinalFilteredList.Add(empSalary);
         //        }

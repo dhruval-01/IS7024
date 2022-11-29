@@ -36,7 +36,7 @@ namespace EmpSalaryData
         public string Deptid { get; set; }
 
         [JsonProperty("jobcode")]
-        public string Jobcode { get; set; }
+        public string JobCode { get; set; }
 
         [JsonProperty("position_nbr")]
         public string PositionNbr { get; set; }
@@ -48,7 +48,7 @@ namespace EmpSalaryData
         public DateTimeOffset JobEntryDt { get; set; }
 
         [JsonProperty("paygroup")]
-        public Paygroup Paygroup { get; set; }
+        public Paygroup PayGroup { get; set; }
 
         [JsonProperty("std_hours")]
         [JsonConverter(typeof(ParseStringConverter))]
@@ -105,7 +105,7 @@ namespace EmpSalaryData
 
     public enum Sex { F, M };
 
-    public partial class EmpSalary
+    public partial class EmpSalary  
     {
         public static List<EmpSalary> FromJson(string json) => JsonConvert.DeserializeObject<List<EmpSalary>>(json, EmpSalaryData.Converter.Settings);
     }
@@ -331,7 +331,7 @@ namespace EmpSalaryData
                 case "POL":
                     return Paygroup.Pol;
             }
-            throw new Exception("Cannot unmarshal type Paygroup");
+            throw new Exception("Cannot unmarshal type PayGroup");
         }
 
         public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
@@ -357,7 +357,7 @@ namespace EmpSalaryData
                     serializer.Serialize(writer, "POL");
                     return;
             }
-            throw new Exception("Cannot marshal type Paygroup");
+            throw new Exception("Cannot marshal type PayGroup");
         }
 
         public static readonly PaygroupConverter Singleton = new PaygroupConverter();
