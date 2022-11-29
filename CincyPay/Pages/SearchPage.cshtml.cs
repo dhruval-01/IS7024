@@ -13,10 +13,10 @@ namespace CincyPay.Pages
 
         private readonly ILogger<SearchPageModel> _logger;
 
-        public SearchPageModel(ILogger<SearchPageModel> logger)
-        {
-            _logger = logger;
-        }
+        //public SearchPageModel(ILogger<SearchPageModel> logger)
+        //{
+        //    _logger = logger;
+        //}
 
         public SearchPageModel()
         {
