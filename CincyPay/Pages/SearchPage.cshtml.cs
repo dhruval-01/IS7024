@@ -17,11 +17,22 @@ namespace CincyPay.Pages
         {
             _logger = logger;
         }
+
+        public SearchPageModel()
+        {
+        }
+
         public void OnGet()
         {
             List<EmpSalary> salaryData = GetEmpData();
 
             ViewData["EmpSalary"] = salaryData;
+        }
+        public async Task<ApiResponse> GetApiResponseAsync()
+        {
+            ApiResponse apiResponse = new ApiResponse();
+            apiResponse.empSalaries = GetEmpData();
+            return apiResponse;
         }
 
         private static List<EmpSalary> GetEmpData()

@@ -1,3 +1,7 @@
+using CincyPay;
+using CincyPay.Pages;
+using Newtonsoft.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +25,24 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+app.MapGet("/CincyPayJobs/v2", async () =>
+{
+    SearchPageModel index = new SearchPageModel();
+    string response = "";
+
+    ApiResponse apiResponse = await index.GetApiResponseAsync();
+    response = JsonConvert.SerializeObject(apiResponse, Formatting.Indented, new JsonSerializerSettings
+    {
+        NullValueHandling = NullValueHandling.Ignore,
+        DefaultValueHandling = DefaultValueHandling.Ignore
+    });
+
+    return response;
+
+
+
+})
+.WithName("RestaurantList");
 
 app.Run();
