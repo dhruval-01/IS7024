@@ -7,148 +7,100 @@
     ViewData["Title"] = "Privacy Policy";
 }
 <style>
-    h1 {
-        font-size: 30px;
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: 300;
-        text-align: center;
-        margin-bottom: 15px;
+    .right {
+        box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+        height: 500px;
+        margin-top: 3%;
     }
-
-    table {
-        width: 100%;
-        table-layout: fixed;
+    .head{
+        font-weight:bold
     }
-
-    .tbl-header {
-        background-color: rgba(255,255,255,0.3);
+    .data{
+        margin-top:17px;
     }
-
-    .tbl-content {
-        height: 545px;
-        overflow-x: auto;
-        margin-top: 0px;
-        border: 1px solid rgba(255,255,255,0.3);
+    .heading{
+        color: #0074D9;
+        margin-top: 10%;
+        margin-left: 15%;
     }
-
-    th {
-        padding: 20px 15px;
-        text-align: left;
-        font-weight: 500;
-        font-size: 12px;
-        color: #fff;
-        text-transform: uppercase;
+    .rws{
+        margin-top: 50px;
+        margin-left: 50px;
     }
-
-    td {
-        padding: 15px;
-        text-align: left;
-        vertical-align: middle;
-        font-weight: 300;
-        font-size: 12px;
-        color: #fff;
-        border-bottom: solid 1px rgba(255,255,255,0.1);
+    .biryani{
+            margin-left: 60px;
+    margin-top: 100px;
     }
-
-    /* demo styles */
-    body {
-        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-        background: linear-gradient(to right, #25c481, #25b7c4);
-        font-family: 'Roboto', sans-serif;
-    }
-
-    section {
-        margin: 50px;
-    }
-
-    /* follow me template */
-    .made-with-love {
-        margin-top: 40px;
-        padding: 10px;
-        clear: left;
-        text-align: center;
-        font-size: 10px;
-        font-family: arial;
-        color: #fff;
-    }
-
-        .made-with-love i {
-            font-style: normal;
-            color: #F50057;
-            font-size: 14px;
-            position: relative;
-            top: 2px;
-        }
-
-        .made-with-love a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-            .made-with-love a:hover {
-                text-decoration: underline;
-            }
-
-    /* for custom scrollbar for webkit browser*/
-    ::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    }
-
-    ::-webkit-scrollbar-thumb {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    }
-
 </style>
-<div class="tbl-header">
-    <table cellpadding="0" cellspacing="0" border="0">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Sugar in Grams</th>
-                <th>Fiber in Grams</th>
-                <th>Serving Size in Grams</th>
-                <th>Sodium in mg</th>
-                <th>Potassium in mg</th>
-                <th>Fat Saturated in mg</th>
-                <th>Fat Total in grams</th>
-                <th>Calories</th>
-                <th>Cholestrol in mg</th>
-                <th>Protein in grams</th>
-                <th>Carbohydrates in grams</th>
-            </tr>
-        </thead>
-    </table>
-</div>
-<div class="tbl-content">
-<table cellpadding="0" cellspacing="0" border="0">
-      
-    <tbody>
-        @{
-                foreach (Item item in recipe.NutriCalories.Items)
-            {
-                    <tr>
-                        <td>@item.Name</td>
-                        <td>@item.SugarG</td>
-                        <td>@item.FiberG</td>
-                        <td>@item.ServingSizeG</td>
-                        <td>@item.SodiumMg</td>
-                        <td>@item.PotassiumMg</td>
-                        <td>@item.FatSaturatedG</td>
-                        <td>@item.CholesterolMg</td>
-                        <td>@item.ProteinG</td>                   
 
 
-                        
-                    </tr>
-                    
-                }
+<div class="container">
+    <div class="row">
+        <div class="col">
             
-        }
-    </tbody>
-</table>
+            <img class="biryani" src="~/Images/biryani.jpg" width="400px" />
+        </div>
+
+        <div class="col right">
+            <h2 class="heading">Biryani - Nutritional Values</h2>
+            @{
+                foreach (Item item in recipe.NutriCalories.Items)
+                {
+                                    <div class="row rws">
+                                    <div class="col">
+                                            <div class="data">
+                                                <span class="head">Sugar in Grams - </span>
+                                                <span class="subject">@item.SugarG</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Fiber in Grams - </span>
+                                                <span class="subject">@item.FiberG</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Serving Size in Grams - </span>
+                                                <span class="subject">@item.ServingSizeG</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Sodium in mg - </span>
+                                                <span class="subject">@item.SodiumMg</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Potassium in mg - </span>
+                                                <span class="subject">@item.PotassiumMg</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Fat Saturated in mg - </span>
+                                                <span class="subject">@item.FatSaturatedG</span>
+                                            </div>
+                                    </div>
+                                    <div class="col">
+                                            <div class="data">
+                                                <span class="head">Fat Total in grams - </span>
+                                                <span class="subject">@item.FatTotalG</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Calories - </span>
+                                                <span class="subject">@item.Calories</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Cholestrol in mg - </span>
+                                                <span class="subject">@item.CholesterolMg</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Protein in grams - </span>
+                                                <span class="subject">@item.ProteinG</span>
+                                            </div>
+                                            <div class="data">
+                                                <span class="head">Carbohydrates in grams - </span>
+                                                <span class="subject">@item.CarbohydratesTotalG</span>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    
+                                  
+            }
+            }
+        </div>
+    </div>
+    
 </div>
